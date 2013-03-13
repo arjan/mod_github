@@ -100,8 +100,12 @@ do_make(Context) ->
     Dir = z_path:site_dir(Context),
     Out = os:cmd("cd " ++ z_utils:os_escape(Dir) ++ " && git pull && echo $?"),
     ?zInfo(Out, Context),
+    %% make all
     z:m(),
+    %% flush site
     z_depcache:flush(Context),
+    %% reload translations
+    z_trans_server:load_translations(Context),
     ?zInfo(?__("Webhook-triggered recompile complete.", Context), Context),
     ok.
 
