@@ -102,6 +102,7 @@ code_change(_OldVsn, State, _Extra) ->
 %%====================================================================
 
 do_make(Context) ->
+    timer:sleep(3000),
     Dir = z_path:site_dir(Context),
     Out = os:cmd("cd " ++ z_utils:os_escape(Dir) ++ " && git pull && echo $?"),
     ?zInfo(Out, Context),
