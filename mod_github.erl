@@ -31,6 +31,7 @@
 %% interface functions
 -export([
          make/1,
+         event/2,
          pid_observe_github_make/3
 ]).
 
@@ -51,6 +52,10 @@ make(Context) ->
 
 pid_observe_github_make(Pid, github_make, _Context) ->
      gen_server:cast(Pid, make).
+
+event(#postback{message=webhook}, Context) ->
+    make(Context),
+    z_render:growl(?__("A git pull is done in the background. Check the admin log for the details.", Context), Context).
 
 
 %%====================================================================
