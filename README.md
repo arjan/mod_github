@@ -14,3 +14,7 @@ query string.
 
 
 Arjan Scherpenisse, 2013
+
+### Known issues
+#### SSH passphrase not supported
+Zotonic will not store your passphrase. The solution is to create a separate SSH key for the zotonic user on the server - without pass phrase - and use this key as deploy key on GitHub.
