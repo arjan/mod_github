@@ -1,9 +1,9 @@
 <div class="modal-body">
 
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="apikey">{_ Github webhook token _}</label>
-        <div class="controls">
-            <input type="text" id="apikey" name="api_key" value="{{ m.config.mod_github.webhook_token.value|escape }}" class="span4 do_autofocus" />
+        <div>
+            <input type="text" id="apikey" name="api_key" value="{{ m.config.mod_github.webhook_token.value|escape }}" class="do_autofocus col-lg-4 col-md-4 form-control" />
             {% wire id="apikey" type="blur" action={config_toggle module="mod_github" key="webhook_token" } %}
         </div>
         <p class="info-block">{_ This token is used to secure the webhook API call for updating this website on a code push to Github (or similar services like BitBucket). _}</p>
@@ -15,6 +15,6 @@
 </div>
 
 <div class="modal-footer">
-    {% button class="btn" text=_"Close" action={dialog_close} tag="a" %}
+    {% button class="btn btn-default" text=_"Close" action={dialog_close} tag="a" %}
 </div>
 
