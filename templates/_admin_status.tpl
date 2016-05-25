@@ -1,4 +1,4 @@
-{% if m.acl.use.mod_import_github %}
+{% if m.acl.use.mod_github %}
 <div class="form-group">
     <div>
         {% button class="btn btn-default" text=_"Run Github webhook" postback=`webhook` delegate=`mod_github` %}
