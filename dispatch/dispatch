@@ -1,0 +1,5 @@
+%% -*- mode: erlang -*-
+[
+ {github_authorize, ["github", "authorize"], controller_github_authorize, [{ssl,any}]},
+ {github_redirect,  ["github", "redirect"],  controller_github_redirect,  [{ssl,any}]}
+].
