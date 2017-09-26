@@ -1,8 +1,10 @@
 Zotonic Github webhook
 ----------------------
 
-This is a Zotonic module to trigger a rebuild of your site from the
-API.
+This is a Zotonic module to:
+
+ * Authenticate using GitHub
+ * trigger a rebuild of your site from the API.
 
 The module exposes an API service at `/api/github/webhook` which can
 be used to POST a token to which, if the token is correct, triggers a

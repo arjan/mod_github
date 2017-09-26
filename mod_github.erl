@@ -1,7 +1,7 @@
 %% @doc Module for serving a (github) Webhook which updates the site
 %% which the module is installed in.
 
-%% Copyright 2013 Arjan Scherpenisse
+%% Copyright 2013-2017 Arjan Scherpenisse
 %%
 %% Licensed under the Apache License, Version 2.0 (the "License");
 %% you may not use this file except in compliance with the License.
@@ -20,8 +20,8 @@
 
 -behaviour(gen_server).
 
--mod_title("Github webhook").
--mod_description("Provides a webhook to add to Github to update the site.").
+-mod_title("GitHub").
+-mod_description("Provides a OAuth authentication and a GitHub webhook to update the site.").
 -mod_prio(50).
 
 %% gen_server exports
