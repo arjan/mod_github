@@ -227,7 +227,7 @@ fetch_user_emails(AccessToken) ->
 
 http_headers() ->
     [
-        {"User-Agent", "Zotonic "++?ZOTONIC_VERSION}
+        {"User-Agent", "Zotonic"}
     ].
 
 % {
